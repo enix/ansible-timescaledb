@@ -1,0 +1,28 @@
+---
+galaxy_info:
+  role_name: timescaledb
+  namespace: enix
+  author: Laurent Corbes
+  description: Ansible role to deploy timescaledb software
+  company: Enix (http://www.enix.io)
+
+  license: license GPLv2
+
+  min_ansible_version: "3.0"
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - focal
+    - jammy
+  - name: Debian
+    versions:
+    - buster
+    - bullseye
+
+  galaxy_tags: 
+    - timescaledb
+    - rdbms
+
+dependencies: 
+  - role: enix.postgresql

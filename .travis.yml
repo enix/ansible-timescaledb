@@ -1,0 +1,24 @@
+---
+language: python
+version: 2.7
+
+sudo: false
+
+script:
+  # Dummy test for role import
+  - echo "=======> Dummy test"
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=main
+---
+language: python
+version: 2.7
+
+sudo: false
+
+script:
+  # Dummy test for role import
+  - echo "=======> Dummy test"
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=main
