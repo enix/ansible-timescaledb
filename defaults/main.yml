@@ -1,2 +1,4 @@
 ---
 # defaults file for timescaledb
+
+timescaledb__version: 2

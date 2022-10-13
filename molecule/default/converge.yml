@@ -3,5 +3,26 @@
 - name: Converge
   hosts: all
 
+  tasks:
+  - name: "Install dependencies"
+    ansible.builtin.apt:
+      name:
+        - gnupg
+        - locales
+      state: present
+      update_cache: yes
+
+- name: Converge
+  hosts: all
+
   roles:
     - role: "enix.timescaledb"
+      timescaledb__version: 2
+      postgresql__version: 14
+      postgresql__global_config_options:
+        - option: listen_addresses
+          value: '*'
+      postgresql__hba_entries:
+        - {type: local, database: all, user: postgres, auth_method: peer}
+        - {type: local, database: all, user: all, auth_method: peer}
+        - {type: host, database: all, user: all, address: '0.0.0.0/0', auth_method: md5}

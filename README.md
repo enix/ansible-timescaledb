@@ -20,7 +20,7 @@ Role Variables
 
 This roles comes preloaded with almost every available default. You can override each one in your hosts/group vars, in your inventory, or in your play. See the annotated defaults in `defaults/main.yml` for help in configuration. All provided variables start with `timescaledb__`.
 
-- `timescaledb__` - desc
+- `timescaledb__version` - TimescaleDB main version to install. Curently only support '2'.
 
 Dependencies
 ------------
