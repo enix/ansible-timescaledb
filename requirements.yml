@@ -1,4 +1,4 @@
 ---
 
 roles:
-  - enix.postgresql
+  - src: enix.postgresql
