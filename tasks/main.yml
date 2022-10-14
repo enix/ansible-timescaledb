@@ -13,7 +13,8 @@
   ansible.builtin.include_tasks: configure.yml
 
 # Force a flush because we need configuration reloaded to manage databases.
-- meta: flush_handlers
+- name: "Flush handlers"
+  ansible.builtin.meta: flush_handlers
 
 - name: "Manage Databases"
   ansible.builtin.include_tasks: databases.yml
