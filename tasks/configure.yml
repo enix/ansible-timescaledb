@@ -1,7 +1,7 @@
 ---
 
 - name: "Autotune instance"
-  command: timescaledb-tune --quiet --yes
+  ansible.builtin.command: timescaledb-tune --quiet --yes
   register: timescaledb_tune_output
   when: timescaledb__autotune
   changed_when: '"success" not in timescaledb_tune_output.stderr'

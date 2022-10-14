@@ -2,3 +2,6 @@
 
 roles:
   - src: enix.postgresql
+
+collections:
+  - name: community.postgresql
