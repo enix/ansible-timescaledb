@@ -8,3 +8,9 @@
 - name: "Install Debian based OS"
   ansible.builtin.include_tasks: install-debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: "Configure"
+  ansible.builtin.include_tasks: configure.yml
+
+- name: "Manage Databases"
+  ansible.builtin.include_tasks: databases.yml

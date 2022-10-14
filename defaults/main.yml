@@ -2,3 +2,5 @@
 # defaults file for timescaledb
 
 timescaledb__version: 2
+timescaledb__autotune: true
+timescaledb__databases: []
